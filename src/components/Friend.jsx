@@ -22,7 +22,7 @@ const medium=palette.neutral.medium;
 const isFriend=friends.find((friend)=>friend._id===friendId)
 
 const patchFriend=async()=>{
-    const response=await fetch(`http://localhost:3001/users/${_id}/${friendId}`,
+    const response=await fetch(`https://postnow-server2.onrender.com/users/${_id}/${friendId}`,
     {
         method:"PATCH",
         headers:{

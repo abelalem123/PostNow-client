@@ -9,7 +9,7 @@ const posts=useSelector((state)=>state.posts)
 const token=useSelector((state)=>state.token)
 
 const getPosts= async()=>{
-    const response= await fetch("http://localhost:3001/posts",{
+    const response= await fetch("https://postnow-server2.onrender.com/posts",{
         method:'GET',
         headers:{Authorization:`Bearer ${token}`},
 
@@ -18,7 +18,7 @@ const getPosts= async()=>{
     dispatch(setPosts({posts:data}))
 }
 const getUserPosts= async()=>{
-    const response= await fetch(`http://localhost:3001/posts/${userId}/posts`,{
+    const response= await fetch(`https://postnow-server2.onrender.com/posts/${userId}/posts`,{
         method:'GET',
         headers:{ Authorization:`Bearer ${token}`},
 
